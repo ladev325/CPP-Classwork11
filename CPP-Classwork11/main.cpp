@@ -3,6 +3,7 @@
 #include <map>
 #include "Diary.h"
 #include "Forum.h"
+#include "Dictionary.h"
 using namespace std;
 
 int main() {
@@ -40,7 +41,8 @@ int main() {
 	Maksym.delEvent(Date() - 1, "Sleep");
 	Maksym.delEvent(Date() - 1, "C#");
 	Maksym.showAll();*/
-	Forum f;
+	
+	/*Forum f;
 	f.addUser("User1", "pass1");
 	f.addUser("User2", "pass2");
 	f.addUser("User3", "pass3");
@@ -48,7 +50,15 @@ int main() {
 	f.loginUser("User1", "pass1");
 	f.loginUser("User1", "pass1");
 	f.logoutUser("User1", "pass1");
-	f.logoutUser("User2", "pass2");
+	f.logoutUser("User2", "pass2");*/
 
+	Dictionary d;
+	d.loadFromFile("dict.txt");
+	//d.addWord("Stone", "Kaminna");
+	//d.addWord("You", "Ty");
+	//d.addWord("Sky", "Nebo");
+	//d.saveToFile("dict.txt");
+
+	cout << d.translate("Sky") << endl;
 
 }
