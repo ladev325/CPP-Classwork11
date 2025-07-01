@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include "Diary.h"
 using namespace std;
 
 int main() {
-	string word;
+	/*string word;
 	map<string, int> words;
 
 	while (word != "stop") {
@@ -23,7 +24,12 @@ int main() {
 
 	for (auto item : words) {
 		cout << item.first << " ~ " << item.second << endl;
-	}
+	}*/
+
+	Diary Maksym;
+	Maksym.addEvent(Date() - 1, "Sleep");
+	Maksym.showAll();
+
 
 
 }
