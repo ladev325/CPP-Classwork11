@@ -9,8 +9,6 @@ using namespace std;
 class Diary
 {
     map<Date, vector<string>> records;
-    Date
-    string description;
 
 public:
     Diary();
