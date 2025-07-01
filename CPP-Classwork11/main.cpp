@@ -29,7 +29,7 @@ int main() {
 	Diary Maksym;
 	Maksym.addEvent(Date() - 1, "Sleep");
 	Maksym.showAll();
-
-
+	Maksym.findByDate(Date() + 1);
+	Maksym.findByDate(Date());
 
 }

@@ -26,8 +26,35 @@ void Diary::showAll() const
 
 void Diary::findByDate(Date d) const
 {
+	auto it = records.find(d);
+	if (it == records.end()) {
+		cout << "No events to show" << endl;
+	}
+	else {
+		for (int i = 0; i < it->second.size(); i++) {
+			cout << it->second[i] << endl;
+		}
+	}
 }
 
 void Diary::delEvent(Date date, string description)
 {
+	auto it = records.find(date);
+	if (it == records.end()) {
+		cout << "No events to delete" << endl;
+	}
+	else {
+		auto itEvent = find(it->second.begin(), it->second.end(), description);
+
+		if (itEvent == it->second.end()) {
+			cout << "No events to delete" << endl;
+		}
+		else {
+			it->second.erase(itEvent);
+			if (it->second.size() == 0) {
+				cout << "Deleted date" << endl;
+				records.erase(date);
+			}
+		}
+	}
 }
