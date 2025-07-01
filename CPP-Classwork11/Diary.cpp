@@ -6,7 +6,6 @@ Diary::Diary()
 	records[Date(2026, 6, 20)].push_back("Birthday");
 	records[Date(2026, 1, 1)].push_back("New year");
 	records[Date()].push_back("Film");
-	description = "-";
 }
 
 void Diary::addEvent(Date d, string description)
