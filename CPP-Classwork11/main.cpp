@@ -29,7 +29,14 @@ int main() {
 	Diary Maksym;
 	Maksym.addEvent(Date() - 1, "Sleep");
 	Maksym.showAll();
+
+	cout << "==============" << endl;
 	Maksym.findByDate(Date() + 1);
 	Maksym.findByDate(Date());
 
+	cout << "==============" << endl;
+	Maksym.delEvent(Date(), "Cpp");
+	Maksym.delEvent(Date() - 1, "Sleep");
+	Maksym.delEvent(Date() - 1, "C#");
+	Maksym.showAll();
 }
