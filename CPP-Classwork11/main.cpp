@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include "Diary.h"
+#include "Forum.h"
 using namespace std;
 
 int main() {
@@ -26,7 +27,7 @@ int main() {
 		cout << item.first << " ~ " << item.second << endl;
 	}*/
 
-	Diary Maksym;
+	/*Diary Maksym;
 	Maksym.addEvent(Date() - 1, "Sleep");
 	Maksym.showAll();
 
@@ -38,5 +39,16 @@ int main() {
 	Maksym.delEvent(Date(), "Cpp");
 	Maksym.delEvent(Date() - 1, "Sleep");
 	Maksym.delEvent(Date() - 1, "C#");
-	Maksym.showAll();
+	Maksym.showAll();*/
+	Forum f;
+	f.addUser("User1", "pass1");
+	f.addUser("User2", "pass2");
+	f.addUser("User3", "pass3");
+	f.addUser("User3", "pass3");
+	f.loginUser("User1", "pass1");
+	f.loginUser("User1", "pass1");
+	f.logoutUser("User1", "pass1");
+	f.logoutUser("User2", "pass2");
+
+
 }
